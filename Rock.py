@@ -16,17 +16,18 @@ def score_counter():
 var=True
 while var==True:
 
-    com_choise=random.choices(Choices)
+    com_choiseL=random.choices(Choices)
+    com_choise = com_choiseL[0]
 
     print(com_choise)
     player_choise_input=input("what is your choise? \nrock => press 1 \nscessir => press 2 \npaper => press 3 \n ....")
-    player_choise =[]
+    player_choise =""
     if player_choise_input == "1":
-            player_choise= ["rock"]
+            player_choise= "rock"
     elif player_choise_input == "2":
-            player_choise= ["scessir"]
+            player_choise= "scessir"
     elif player_choise_input == "3":
-            player_choise= ["paper"]
+            player_choise= "paper"
     else:
             print ("Not valied input:(" )
     
@@ -34,27 +35,27 @@ while var==True:
     
     if player_choise == com_choise:
         score_counter()
-    elif player_choise == ["rock"]  :
-        if com_choise ==["paper"]:
+    elif player_choise == "rock" :
+        if com_choise =="paper":
             com_score +=1
             score_counter()
-        elif com_choise ==["scessir"]:
+        elif com_choise =="scessir":
             player_score+=1
             score_counter()
     
-    elif player_choise == ["paper"] :
-        if com_choise ==["scessir"]:
+    elif player_choise == "paper" :
+        if com_choise =="scessir":
             com_score +=1
             score_counter()
-        elif com_choise ==["rock"]:
+        elif com_choise =="rock":
             player_score+=1
             score_counter()
     
-    elif player_choise == ["scessir"]:
-        if com_choise ==["rock"]:
+    elif player_choise == "scessir":
+        if com_choise =="rock":
             com_score +=1
             score_counter()
-        elif com_choise ==["paper"]:
+        elif com_choise =="paper":
             player_score+=1
             score_counter()
             
